@@ -1,0 +1,7 @@
+model:
+  name: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+
+training:
+  batch_size: 1
+  epochs: 1
+  learning_rate: 0.0002
