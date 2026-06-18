@@ -20,8 +20,18 @@ from src.training.trainer.sft_trainer import (
     get_training_args
 )
 
+from src.monitoring.wandb_manager import (
+    initialize_wandb
+)
+
+from src.monitoring.experiment_logger import (
+    finish_run
+)
+
 
 def main():
+
+    initialize_wandb()
 
     dataset = prepare_dataset()
 
@@ -52,6 +62,8 @@ def main():
     trainer.save_model(
         "artifacts/models/tinyllama_lora"
     )
+
+    finish_run()
 
 
 if __name__ == "__main__":

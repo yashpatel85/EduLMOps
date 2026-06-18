@@ -23,5 +23,5 @@ def get_training_args():
 
         optim="paged_adamw_32bit",
 
-        report_to="none"
+        report_to="wandb"
     )
